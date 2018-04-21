@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Gulp", "Pug", "SCSS", "ES6", "Bootstrap 4", "Babel", "Browsersync"],
+  "keywords": [
+    "Gulp",
+    "Pug",
+    "SCSS",
+    "ES6",
+    "Bootstrap 4",
+    "Babel",
+    "Browsersync"
+  ],
   "author": "André Daniel",
   "license": "ISC",
   "devDependencies": {
