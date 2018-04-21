@@ -1,13 +1,13 @@
 {
-  "name": "codevance",
+  "name": "frontend-easy-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A boilerplate with Gulp + Pug + SCSS + ES6 + Bootstrap 4 + Babel + Browsersync to a easy start.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Gulp", "Pug", "SCSS", "ES6", "Bootstrap 4", "Babel", "Browsersync"],
+  "author": "André Daniel",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.23.0",
