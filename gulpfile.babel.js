@@ -63,8 +63,8 @@ gulp.task('js', function(){
   var bundler = browserify({
     entries: 'src/scripts/main.js',
     debug: true
-  });
-  bundler.transform(babelify);
+  })
+  bundler.transform(babelify)
 
   bundler.bundle()
     .on('error', handleErrors)
@@ -76,7 +76,12 @@ gulp.task('js', function(){
     .pipe(babel())
     .pipe(SourceMaps.write())
     .pipe(gulp.dest('build/js'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 })
 
-gulp.task('default', [ 'html', 'css', 'js', 'serve' ])
+gulp.task('copy', function () {
+  gulp.src('src/images/**/*')
+    .pipe(gulp.dest('build/images'))
+})
+
+gulp.task('default', [ 'html', 'css', 'js', 'copy', 'serve' ])
