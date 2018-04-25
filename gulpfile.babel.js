@@ -79,9 +79,14 @@ gulp.task('js', function(){
     .pipe(browserSync.stream())
 })
 
-gulp.task('copy', function () {
+gulp.task('images', function () {
   gulp.src('src/images/**/*')
     .pipe(gulp.dest('build/images'))
 })
 
-gulp.task('default', [ 'html', 'css', 'js', 'copy', 'serve' ])
+gulp.task('fonts', function () {
+  gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('build/fonts'))
+})
+
+gulp.task('default', [ 'html', 'css', 'js', 'images', 'fonts', 'serve' ])

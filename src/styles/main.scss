@@ -1,7 +1,12 @@
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
-@import 'generals';
+// Fonts
+@import 'themify';
+
 @import 'variables';
+@import 'generals';
+@import 'buttons';
 
 @import 'navbar';
 @import 'hero';
+@import 'what-we-do';

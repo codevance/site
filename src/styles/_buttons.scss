@@ -1,0 +1,23 @@
+.btn {
+    text-transform: uppercase;
+    padding: 15px 50px;
+    border-radius: 0;
+    font-size: 13px;
+    border: none;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to right, $cyan-strong, $blue-strong);
+    
+    &:hover {
+        background-image: linear-gradient(to right, $blue-strong, $cyan-strong);
+    }
+}
+
+.btn-secondary {
+    background-image: linear-gradient(to right, $green-light-lime, $green-soft);
+    
+    &:hover {
+        background-image: linear-gradient(to right, $green-soft, $green-light-lime);
+    }
+}
