@@ -36,13 +36,13 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "vinyl-buffer": "^1.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.1.0",
     "jquery": "^3.3.1",
     "owl.carousel": "^2.3.4",
-    "popper.js": "^1.14.3",
-    "vinyl-buffer": "^1.0.1"
+    "popper.js": "^1.14.3"
   }
 }

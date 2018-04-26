@@ -1,0 +1,196 @@
+.our-cases {
+    background: -webkit-linear-gradient(top, $blue-dark, $blue-light-dark);
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+
+    .cases-subtitle {
+        text-transform: uppercase;
+        color: $cyan-grayish;
+        font-size: 12px;
+    }
+
+    .cases-title {
+        background: -webkit-linear-gradient(left, $green-soft-lime, $cyan-strong);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        margin-top: 10px;
+        font-size: 35px;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 30px;
+        }
+
+        span {
+            font-weight: 700;
+        }        
+    }
+
+    .cases-text {
+        margin: 30px auto 60px;
+        font-size: 16px;
+        color: $white;
+        width: 50%;
+
+        @include media-breakpoint-down(lg) {
+            margin: 30px auto;
+            width: 70%;
+        }
+        
+        @include media-breakpoint-down(md) {
+            width: 80%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    .cases-content {
+        position: relative;
+        text-align: left;
+        top: 30px;
+
+        .carousel-info {
+            margin-top: 60px;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 20px;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 30px;
+            }
+
+            .item {
+                max-width: 80%;
+                margin: auto;
+
+                @include media-breakpoint-down(md) {
+                    max-width: 100%;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    min-width: 100%;
+                }
+            }
+
+            .owl-item.active {
+                color: $white;
+                
+                .cc-header {
+                    color: $cyan-strong;
+                    font-weight: 500;
+                    font-size: 20px;
+
+                    @include media-breakpoint-down(xs) {
+                        font-size: 18px;
+                    }
+
+                    span {
+                        margin-left: 10px;
+                        font-weight: 700;
+                    }
+                }
+
+                .cc-text {
+                    text-align: justify;
+                    margin: 30px 0 0 0;
+                    font-size: 14px;
+
+                    @include media-breakpoint-down(md) {
+                        margin: 10px 0 0 0;
+                        font-size: 13px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        margin: 20px 0 0 0;
+                    }
+                }
+            }
+
+            .owl-nav {
+                margin-left: 50px;
+                margin-top: 130px;
+                text-align: left;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 30px;
+                    margin-top: 30px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    margin: -60px 0 10px 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+
+                .owl-prev, .owl-next {
+                    transition: transform 300ms ease-in-out;
+
+                    &:hover {
+                        background-color: transparent;
+                        transform: scale(1.1);
+                    }
+                }
+                
+                .owl-prev:focus, .owl-next:focus {
+                    outline: transparent;
+                }
+                
+                i {
+                    transition: color 100ms linear;
+                    color: $cyan-strong;
+                    font-weight: bold;
+                    font-size: 40px;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: 30px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 40px;
+                    }
+
+                    &:hover {
+                        color: $blue-dark;
+                    }
+                }
+            }
+
+            .owl-dots {
+                position: relative;
+                margin-left: 50px;
+                text-align: left;
+                top: 30px;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 35px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    margin-left: 0;
+                    top: 10px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    text-align: center;
+                    margin-left: 0;
+                    top: 10px;
+                }
+            }
+        }
+    }
+}
