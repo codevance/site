@@ -11,9 +11,9 @@
     }
 
     .oc-title {
-        font-size: 25px;
-        color: #445668;
+        color: $blue-dark-grayish;
         text-transform: uppercase;
+        font-size: 25px;
 
         span {
             font-weight: 700;
@@ -32,9 +32,9 @@
         }
 
         img {
-            width: 90px;
-            height: auto;
             margin-top: 20px;
+            height: auto;
+            width: 90px;
         }
     }
 }
