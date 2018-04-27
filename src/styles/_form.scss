@@ -1,0 +1,15 @@
+.form-control {
+    border: none;
+    border-bottom: 1px solid $blue-mostly-dark;
+    background-color: transparent;
+    font-family: $primary;
+    margin-bottom: 30px;
+    border-radius: 0;
+    font-size: 18px;
+
+    &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        color: $white;
+    }
+}

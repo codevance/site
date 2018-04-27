@@ -43,22 +43,6 @@
         }
     }
 
-    .form-control {
-        border-bottom: 1px solid $blue-mostly-dark;
-        background-color: transparent;
-        font-family: $primary;
-        margin-bottom: 30px;
-        border-radius: 0;
-        font-size: 18px;
-        border: none;
-
-        &:focus {
-            background-color: transparent;
-            box-shadow: none;
-            color: $white;
-        }
-    }
-
     .social {
         margin-top: 60px;
 

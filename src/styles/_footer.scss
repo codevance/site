@@ -1,0 +1,78 @@
+.footer {
+    padding: 40px 0;
+
+    @include media-breakpoint-down(xs) {
+        text-align: center;
+    }
+
+    .the-codevance {
+        color: $cyan-grayish;
+        margin-top: 20px;
+        font-size: 12px;
+        max-width: 90%;
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        @include media-breakpoint-down(md) {
+            text-align: right;
+        }
+
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+
+            @include media-breakpoint-down(lg) {
+                margin: 0 0 10px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                margin: 10px 0;
+            }
+
+            a {
+                transition: all 250ms ease;
+                color: $blue-dark-grayish;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    color: $cyan-strong;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .email, .tel {
+        color: $cyan-strong;
+        text-align: right;
+        font-weight: 700;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+}
+
+.copyright {
+    background-color: rgba(138, 194, 197, 0.2);
+    text-align: center;
+    color: $cyan-light;
+    font-size: 11px;
+    padding: 20px 0;
+
+    a {
+        color: $cyan-strong;
+    }
+}
