@@ -1,9 +1,14 @@
+.testimonials {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
 .testimonials-content {
     color: $blue-dark-grayish;
-    margin: 100px auto;
     text-align: center;
     position: relative;
     max-width: 80%;
+    margin: auto;
 
     @include media-breakpoint-down(sm) {
         max-width: 90%;
