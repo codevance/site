@@ -1,3 +1,38 @@
+@mixin gradient-btn($color1, $color2) {
+    position: relative;
+    z-index: 1;
+    
+    &:after,
+    &:before {
+        transition: opacity 200ms ease-in-out;
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+    
+    &:before {
+        background-image: linear-gradient(to right, $color1, $color2);
+        z-index: -2;
+    }
+    
+    &:after {
+        background-image: linear-gradient(to right, $color2, $color1);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+        background: transparent;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
 .btn {
     text-transform: uppercase;
     padding: 15px 50px;
@@ -7,17 +42,9 @@
 }
 
 .btn-primary {
-    background-image: linear-gradient(to right, $cyan-strong, $blue-strong);
-    
-    &:hover {
-        background-image: linear-gradient(to right, $blue-strong, $cyan-strong);
-    }
+    @include gradient-btn($blue-strong, $cyan-strong);
 }
 
 .btn-secondary {
-    background-image: linear-gradient(to right, $green-light-lime, $green-soft);
-    
-    &:hover {
-        background-image: linear-gradient(to right, $green-soft, $green-light-lime);
-    }
+    @include gradient-btn($green-light-lime, $green-soft);
 }
