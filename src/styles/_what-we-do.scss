@@ -51,21 +51,6 @@
 
 .wwd-content {
     color: $blue-dark;
-    
-    i {
-        background: -webkit-linear-gradient(left, $green-light, $green-light-lime);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        font-size: 60px;
-        
-        @include media-breakpoint-down(md) {
-            font-size: 45px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            font-size: 40px;
-        }
-    }
 
     .content-title {
         font-size: 25px;
@@ -103,5 +88,35 @@
         @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
         }
+    }
+}
+
+.icon-green {
+    font-size: 60px;
+    background: -webkit-linear-gradient(left, $green-light, $green-light-lime);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+    @include media-breakpoint-down(md) {
+        font-size: 45px;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        font-size: 40px;
+    }
+}
+
+.icon-blue {
+    font-size: 60px;
+    background: -webkit-linear-gradient(left, $green-soft-lime, $blue-dark);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+    @include media-breakpoint-down(md) {
+        font-size: 45px;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        font-size: 40px;
     }
 }
