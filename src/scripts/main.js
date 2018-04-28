@@ -5,7 +5,7 @@ import 'owl.carousel';
 
 $(document).ready(function(){
 
-    $('body').css('padding-bottom', $('#footer').outerHeight())
+    $('#footer-gap').height($('#footer').outerHeight())
 
     $('.carousel-image').owlCarousel({
         responsive:{

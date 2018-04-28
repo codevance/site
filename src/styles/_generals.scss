@@ -1,3 +1,9 @@
 h1, h2, h3, h4, h5, h6, a, body {
     font-family: 'Encode Sans Expanded', sans-serif;
 }
+
+.main-content {
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
