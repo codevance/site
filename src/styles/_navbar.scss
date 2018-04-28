@@ -21,7 +21,12 @@
 }
 
 .navbar-toggler {
-    background-color: $white;
     border-radius: 0;
+    color: $white !important;
     border: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
 }
