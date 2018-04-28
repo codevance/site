@@ -94,10 +94,11 @@ timeline
         easing: 'linear',
     })
     .add({
-        targets: '#talk-to-us',
-        opacity: [0, 1],
+        targets: '#footer',
+        translateY: [200, 0],
         duration: 1000,
-        easing: 'linear',
+        offset: '+=1000',
+        easing: 'easeInOutQuad',
     })
     .pause()
 
