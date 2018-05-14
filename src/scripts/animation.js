@@ -5,7 +5,7 @@ var timeline = anime.timeline();
 timeline
     .add({
         targets: 'nav.fixed-top',
-        backgroundColor: '#000',
+        backgroundColor: '#005b7f',
         duration: 1000,
         easing: 'linear',
     })

@@ -22,6 +22,7 @@
 
     .oc-items {
         margin-top: 60px;
+        text-align: center;
 
         @include media-breakpoint-down(md) {
             margin-top: 40px;
@@ -32,9 +33,11 @@
         }
 
         img {
-            margin-top: 20px;
+            margin: 40px 10px;
             height: auto;
-            width: 90px;
+            width: 150px;
+            height: 90px;
+            object-fit: contain;
         }
     }
 }
