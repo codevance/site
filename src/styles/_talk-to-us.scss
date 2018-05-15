@@ -1,6 +1,6 @@
 .talk-to-us {
     background-blend-mode: multiply;
-    padding: 70px 0 100px;
+    padding: 75px 0 50px;
     text-align: center;
     height: auto;
     
@@ -14,18 +14,6 @@
 
     @include media-breakpoint-down(sm) {
         padding: 40px 0;
-    }
-
-    .container {
-        max-width: 60%;
-
-        @include media-breakpoint-down(lg) {
-            max-width: 80%;
-        }
-
-        @include media-breakpoint-down(sm) {
-            max-width: 100%;
-        }
     }
 
     .ttu-title {
@@ -51,14 +39,14 @@
             text-decoration: none;
             color: $cyan-light;
             
-            p {
+            span {
                 transition: all 300ms ease-in-out;
                 color: transparent;
                 font-size: 10px;
             }
 
             &:hover {
-                p {
+                span {
                     color: $cyan-light;
                 }
             }

@@ -3,7 +3,7 @@
     text-align: center;
     position: relative;
     max-height: 100vh;
-    height: 770px;
+    padding: 350px 0;
 
     .hero-img {
         object-fit: cover;
@@ -16,7 +16,7 @@
     }
 
     .hero-overlay {
-    background: -webkit-linear-gradient(left, rgba(10, 41, 68, 0.95), rgba(0, 111, 158, 0.4));
+        @include gradient-y(rgba(#0a2944, 0.8), rgba(#006f9e, 0.8), 50%, 100%);
         position: absolute;
         bottom: 0;
         right: 0;
@@ -25,15 +25,17 @@
         z-index: 1;
     }
 
-    .container, .row {
+    .row,
+    .container {
         height: 100%;
     }
 
     .hero-title {
-        background: -webkit-linear-gradient(left, $cyan-strong, $green-soft-lime);
+        @include gradient-x($cyan-strong, $green-soft-lime);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         text-transform: uppercase;
+        letter-spacing: 2px;
         font-size: 40px;
 
         @include media-breakpoint-down(md) {

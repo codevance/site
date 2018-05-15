@@ -7,9 +7,13 @@
     right: 0;
     left: 0;
     padding: 40px 0 0 0;
-
+    
     @include media-breakpoint-down(xs) {
         text-align: center;
+    }
+
+    .brand {
+        max-width: 250px;
     }
 
     .the-codevance {
@@ -37,25 +41,26 @@
         }
 
         li {
-            margin: 10px 0;
-
-            @include media-breakpoint-down(lg) {
-                margin: 0 0 10px;
-            }
-
-            @include media-breakpoint-down(xs) {
-                margin: 10px 0;
-            }
-
             a {
                 transition: all 250ms ease;
                 color: $blue-dark-grayish;
                 text-decoration: none;
                 font-size: 14px;
+                display: block;
+                padding: 10px 0;
+                transform-origin: left center;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 0 0 10px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    padding: 10px 0;
+                }
 
                 &:hover {
                     color: $cyan-strong;
-                    font-size: 15px;
+                    transform: scale(1.05);
                 }
             }
         }

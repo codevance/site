@@ -1,8 +1,13 @@
 .how-we-do {
-    background: -webkit-linear-gradient(top, $green-soft, $cyan-strong);
+    @include gradient-y($green-soft, $cyan-strong);
     text-align: center;
     position: relative;
-    
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
     .hwd-title {
         text-transform: uppercase;
         padding-top: 50px;
@@ -122,4 +127,13 @@
             }
         }
     }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.7;
 }

@@ -27,17 +27,17 @@ timeline
     })
     .add({
         targets: '.wwd-header',
-        translateY: [-50, 0],
-        scale: [0.9, 1],
-        duration: 500,
-        offset: '-=500',
+        translateY: [-30, 0],
+        scale: [0.95, 1],
+        duration: 1000,
+        offset: '-=1000',
         easing: 'easeInOutQuad',
     })
     .add({
-        targets: '#what-we-do .block',
+        targets: '#what-we-do .main-row',
         translateY: [200, 0],
         duration: function (el, i, l) {
-            return 1000 + (i * 1000);
+            return 1500 + (i * 1500);
         },
         offset: '-=500',
         easing: 'easeInOutQuad',
@@ -46,27 +46,25 @@ timeline
         targets: '.hwd-header',
         translateY: [50, 0],
         opacity: [0.8, 1],
-        duration: 500,
-        offset: '-=3500',
+        duration: 1000,
         easing: 'easeInOutQuad',
+        offset: '-=1000',
     })
     .add({
         targets: '#how-we-do .block',
         translateY: [200, 0],
         duration: function (el, i, l) {
-            return 1000 + (i * 300);
+            return 1000 + (i * 500);
         },
-        offset: '-=4000',
+        offset: '-=1500',
         easing: 'easeInOutQuad',
     })
     .add({
         targets: '#our-customers img',
         opacity: [0, 1],
-        duration: 1000,
         easing: 'linear',
-        offset: '-=3000',
         duration: function (el, i, l) {
-            return 300 + (i * 300);
+            return 500 + (i * 250);
         },
     })
     .add({
@@ -74,30 +72,28 @@ timeline
         translateY: [50, 0],
         opacity: [0.8, 1],
         duration: 1000,
-        offset: '-=2500',
+        offset: '-=3000',
         easing: 'easeInOutQuad',
     })
     .add({
         targets: '#our-cases .block',
         translateY: [200, 0],
         duration: function (el, i, l) {
-            return 1000 + (i * 300);
+            return 1000 + (i * 1000);
         },
-        offset: '-=4000',
+        offset: '-=3000',
         easing: 'easeInOutQuad',
     })
     .add({
         targets: '#testimonials',
-        opacity: [0, 1],
+        scale: [0.95, 1],
         duration: 1000,
-        offset: '-=3000',
         easing: 'linear',
     })
     .add({
         targets: '#footer',
         translateY: [200, 0],
         duration: 1000,
-        offset: '+=1000',
         easing: 'easeInOutQuad',
     })
     .pause()

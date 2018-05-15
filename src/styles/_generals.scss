@@ -1,5 +1,12 @@
-h1, h2, h3, h4, h5, h6, a, body {
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
     font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
 }
 
 .main-content {
