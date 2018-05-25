@@ -22,23 +22,46 @@ $(document).ready(function(){
 
     $('#footer-gap').height($('#footer').outerHeight())
 
-    $('.carousel-image').owlCarousel({
+    var $carouselImages = $('.carousel-image');
+    $carouselImages.owlCarousel({
         responsive:{
-            0:{
+            0: {
                 items: 1,
                 loop: true,
                 dots: false
             }
         }
     });
-    $('.carousel-info').owlCarousel({
+
+    var $carouselInfos = $('.carousel-info');
+    $carouselInfos.owlCarousel({
         responsive:{
-            0:{
+            0: {
                 items: 1,
                 nav: true,
                 loop: true,
                 navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>']
             }
         }
+    });
+
+    $carouselInfos.on('changed.owl.carousel', function (event) {
+        $carouselImages.trigger('to.owl.carousel', event.item.index)
+    });
+
+    $carouselImages.on('changed.owl.carousel', function (event) {
+        $carouselInfos.trigger('to.owl.carousel', event.item.index)
+    });
+
+    // customers
+    var $carouselCustomers = $('.oc-items');
+    $carouselCustomers.owlCarousel({
+        nav: false,
+        dots: false,
+        loop: true,
+        autoWidth: true,
+        margin: 30,
+        autoplay: true,
+        center: true,
     });
 });
