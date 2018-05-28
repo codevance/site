@@ -4,9 +4,9 @@ import 'bootstrap';
 import 'owl.carousel';
 
 function goToByScroll(id) {
-    // Remove "link" from the ID
+
     id = id.replace('link', '')
-    // Scroll
+
     $('html, body').animate({
         scrollTop: $(id).offset().top - 80
     }, 'slow')
@@ -24,23 +24,23 @@ $(document).ready(function(){
 
     var $carouselImages = $('.carousel-image');
     $carouselImages.owlCarousel({
-        responsive:{
-            0: {
-                items: 1,
-                loop: true,
-                dots: false
-            }
-        }
+        items: 1,
+        loop: true,
+        dots: false,
     });
 
     var $carouselInfos = $('.carousel-info');
     $carouselInfos.owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
         responsive:{
             0: {
-                items: 1,
-                nav: true,
-                loop: true,
-                navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>']
+                dots: false,
+            },
+            769: {
+                dots: true,
             }
         }
     });

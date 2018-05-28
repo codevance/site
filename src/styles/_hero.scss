@@ -7,12 +7,13 @@
 
     .hero-img {
         object-fit: cover;
+        object-position: center;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
         left: 0;
         top: 0;
-        z-index: 0;
     }
 
     .hero-overlay {

@@ -1,16 +1,11 @@
 .talk-to-us {
+    background: url(../images/talk.jpg), $blue-dark-grayish;
     background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
     padding: 75px 0 50px;
     text-align: center;
     height: auto;
-    
-    background: 
-    url(../images/talk.jpg),
-    $blue-dark-grayish;
-    
-    // background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
 
     @include media-breakpoint-down(sm) {
         padding: 40px 0;
@@ -29,6 +24,10 @@
         span {
             font-weight: 700;
         }
+    }
+
+    textarea {
+        height: 100px;
     }
 
     .social {

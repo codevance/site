@@ -128,7 +128,7 @@
                 margin-left: 50px;
                 text-align: left;
                 position: absolute;
-                top: 350px;
+                bottom: -60px;
 
                 @include media-breakpoint-down(lg) {
                     margin-left: 30px;
@@ -167,7 +167,7 @@
                     }
 
                     @include media-breakpoint-down(sm) {
-                        font-size: 40px;
+                        font-size: 25px;
                     }
 
                     &:hover {
@@ -192,9 +192,9 @@
                 }
 
                 @include media-breakpoint-down(sm) {
+                    top: -40px;
+                    position: relative;
                     text-align: center;
-                    margin-left: 0;
-                    top: 10px;
                 }
             }
         }
