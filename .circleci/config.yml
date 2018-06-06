@@ -26,7 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run: 
+        name: "Instalando dependências do NPM"
+        command: npm install
 
       - save_cache:
           paths:
@@ -34,11 +36,18 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: npm build
+      - run: 
+        name: "Fazendo build do projeto"
+        command: npm build
+
+      - run: 
+        name: "Gerando artefato"
+        command: tar cvfzp ~/repo/artifact.tgz ~/repo/build/*
+
+      - run: 
 
       - store_artifacts:
-          path: ~/repo/build/
-          destination: build
+          path: ~/repo/artifact.tgz
 
   # deploy:
   #   machine:
