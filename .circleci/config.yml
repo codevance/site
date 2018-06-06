@@ -36,5 +36,16 @@ jobs:
       # run tests!
       - run: npm build
 
-      - run: rsync -rv build/* ${SERVERNAME}@${INDEX_PATH}
+      - store_artifacts:
+          path: ~/repo/build/
+          destination: build
+
+  # deploy:
+  #   machine:
+  #     enabled: true
+  #   steps:
+  #     - run:
+  #       name: Deploy over SSH
+  #       command: |
+
 
