@@ -4,45 +4,45 @@
 #
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:7.10
-    
-    working_directory: ~/repo
+    build:
+        docker:
+            - image: circleci/node:7.10
+        
+        working_directory: ~/repo
 
-    steps:
-      - checkout
+        steps:
+            - checkout
 
-      - restore_cache:
-        key: v1-dependencies-{{ checksum "package.json" }}
+            - restore_cache:
+                key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: 
-        name: 'Instalando dependências do NPM'
-        command: npm install
+            - run: 
+                name: 'Instalando dependências do NPM'
+                command: npm install
 
-      - save_cache:
-        key: v1-dependencies-{{ checksum "package.json" }}
-        paths:
-          - node_modules
-           
-      - run: 
-        name: 'Fazendo build do projeto'
-        command: npm build
+            - save_cache:
+                key: v1-dependencies-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+                     
+            - run: 
+                name: 'Fazendo build do projeto'
+                command: npm build
 
-      - run: 
-        name: 'Gerando artefato'
-        command: tar cvfzp ~/repo/artifact.tgz ~/repo/build/*
+            - run: 
+                name: 'Gerando artefato'
+                command: tar cvfzp ~/repo/artifact.tgz ~/repo/build/*
 
-      - store_artifacts:
-        path: ~/repo/artifact.tgz
+            - store_artifacts:
+                path: ~/repo/artifact.tgz
 
 
-  # deploy:
-  #   machine:
-  #     enabled: true
-  #   steps:
-  #     - run:
-  #       name: Deploy over SSH
-  #       command: |
+    # deploy:
+    #     machine:
+    #         enabled: true
+    #     steps:
+    #         - run:
+    #             name: Deploy over SSH
+    #             command: |
 
 
