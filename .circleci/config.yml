@@ -38,4 +38,4 @@ jobs:
 
             - run:
                 name: 'Deploy via SSH'
-                command: scp -rv build/* $SSH:$PATH
+                command: scp -rv build/* $SSH:$INDEX_PATH
