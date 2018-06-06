@@ -31,10 +31,10 @@ jobs:
         command: npm install
 
       - save_cache:
-          paths:
-            - node_modules
-            key: v1-dependencies-{{ checksum "package.json" }}
-        
+        key: v1-dependencies-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+           
       # run tests!
       - run: 
         name: "Fazendo build do projeto"
