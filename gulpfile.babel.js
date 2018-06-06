@@ -89,3 +89,4 @@ const fonts = () => {
 }
 
 gulp.task('default', gulp.series(html, css, js, images, fonts, serve))
+gulp.task('build', gulp.series(html, css, js, images, fonts))
