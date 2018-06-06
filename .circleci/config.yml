@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - checkout
-      
+
       - restore_cache:
         key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: 
-        name: Instalando dependências do NPM
+        name: 'Instalando dependências do NPM'
         command: npm install
 
       - save_cache:
@@ -26,11 +26,11 @@ jobs:
           - node_modules
            
       - run: 
-        name: Fazendo build do projeto
+        name: 'Fazendo build do projeto'
         command: npm build
 
       - run: 
-        name: Gerando artefato
+        name: 'Gerando artefato'
         command: tar cvfzp ~/repo/artifact.tgz ~/repo/build/*
 
       - store_artifacts:
