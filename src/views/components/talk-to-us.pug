@@ -4,11 +4,14 @@
             .col-sm-10.ml-auto.mr-auto
                 h2.ttu-title Fale 
                     span com a gente
-                .form
-                    input.form-control(type="text" placeholder="Nome")
-                    input.form-control(type="email" placeholder="e-mail")
-                    textarea.form-control(rows="5" placeholder="Mensagem")
-                    button.btn.btn-primary.btn-block(type="button") Enviar
+                form.form(action="https://formspree.io/moacir.moda@codevance.com.br" method="POST")
+                    input(type="hidden" name="_language" value="pt-BR")
+                    input(type="hidden" name="_subject" value="Novo contato pelo site!")
+                    input.form-control(type="text" name="nome" placeholder="Nome" required)
+                    input.form-control(type="email" name="_replyto" placeholder="E-mail" required)
+                    input.form-control(type="text" name="telefone" placeholder="Telefone para contato" required)
+                    textarea.form-control(rows="7" name="mensagem" placeholder="Mensagem" required)
+                    button.btn.btn-primary.btn-block(type="submit") Enviar
                 .social
                     .social-text Siga a Codevance nas redes sociais
                     a(href="https://telegram.me/moacirmoda" target="_blank")
