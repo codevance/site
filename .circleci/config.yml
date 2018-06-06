@@ -28,13 +28,10 @@ jobs:
             - run: 
                 name: 'Fazendo build do projeto'
                 command: node_modules/gulp/bin/gulp.js build
-
-            # - run: 
-            #     name: 'Gerando artefato'
-            #     command: cd build && tar cvfzp ~/repo/artifact.tgz *
-
-            # - store_artifacts:
-            #     path: ~/repo/artifact.tgz
+            
+            - run: 
+                name: 'Marcando data do build'
+                command: echo '<!-- build at:' $(date) '-->' >> build/index.html
 
             - run:
                 name: 'Deploy via SSH'
