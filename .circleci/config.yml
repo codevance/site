@@ -27,7 +27,7 @@ jobs:
                      
             - run: 
                 name: 'Fazendo build do projeto'
-                command: npm build
+                command: gulp build
 
             - run: 
                 name: 'Gerando artefato'
