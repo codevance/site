@@ -44,10 +44,8 @@ jobs:
         name: "Gerando artefato"
         command: tar cvfzp ~/repo/artifact.tgz ~/repo/build/*
 
-      - run: 
-
       - store_artifacts:
-          path: ~/repo/artifact.tgz
+        path: ~/repo/artifact.tgz
 
 
   # deploy:
