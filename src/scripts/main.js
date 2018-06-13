@@ -26,7 +26,7 @@ $(document).ready(function(){
     $carouselImages.owlCarousel({
         items: 1,
         loop: true,
-        dots: false,
+        dots: true,
     });
 
     var $carouselInfos = $('.carousel-info');
@@ -45,12 +45,14 @@ $(document).ready(function(){
         }
     });
 
-    $carouselInfos.on('changed.owl.carousel', function (event) {
-        $carouselImages.trigger('to.owl.carousel', event.item.index)
+    $carouselInfos.on('changed.owl.carousel', function (e) {
+        var index = e.page.index
+        $carouselImages.trigger('to.owl.carousel', index)
     });
 
-    $carouselImages.on('changed.owl.carousel', function (event) {
-        $carouselInfos.trigger('to.owl.carousel', event.item.index)
+    $carouselImages.on('changed.owl.carousel', function (e) {
+        var index = e.page.index
+        $carouselInfos.trigger('to.owl.carousel', index)
     });
 
     // customers

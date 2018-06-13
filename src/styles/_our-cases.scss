@@ -29,7 +29,7 @@
     }
 
     .cases-text {
-        margin: 30px auto 60px;
+        margin: 30px auto;
         font-size: 16px;
         color: $white;
         width: 50%;
@@ -120,15 +120,11 @@
                 }
             }
 
-            .owl-stage-outer {
-                margin-bottom: 100px;
-            }
-
             .owl-nav {
-                margin-left: 50px;
+                margin-left: 40px;
                 text-align: left;
                 position: absolute;
-                bottom: -60px;
+                bottom: -75px;
 
                 @include media-breakpoint-down(lg) {
                     margin-left: 30px;
@@ -180,7 +176,8 @@
                 position: absolute;
                 margin-left: 50px;
                 text-align: left;
-                top: 465px;
+                bottom: -130px;
+                z-index: 5;
 
                 @include media-breakpoint-down(lg) {
                     margin-left: 35px;
@@ -198,5 +195,16 @@
                 }
             }
         }
+    }
+}
+
+.carousel-image {
+    img {
+        margin-top: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .owl-dots {
+        display: none;
     }
 }
